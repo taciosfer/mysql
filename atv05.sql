@@ -1,0 +1,39 @@
+-- 10º PASSO: CONFERINDO...
+-- SELECT * FROM tb_items;
+
+-- 9º PASSO: DELETE DOS ITENS ID 2 E ID 3:
+-- DELETE FROM tb_items WHERE id = 3; -- SAFE UPDATE PRECISA ESTAR OFF!
+-- SET SQL_SAFE_UPDATES = 0;
+
+-- 8º PASSO: QUERY DE ATUALIZAÇÃO (DE TAMANHOS DAS PEÇAS):
+-- UPDATE tb_items SET tamanho = "M" WHERE tamanho = "P";
+
+-- 7º PASSO: SELECT QUE RETORNA ITEMS COM ID 2:
+-- SELECT * FROM tb_items WHERE id = 2;
+
+-- 6º PASSO: SELECT QUE RETORNA ITEMS COM VALOR MENOR QUE $50:
+-- SELECT * FROM tb_items WHERE preço < 50;
+
+-- 5º PASSO: SELECT QUE RETORNA ITEMS COM VALOR MAIOR QUE $50:
+-- SELECT * FROM tb_items WHERE preço > 50;
+
+-- 4º PASSO: INSERE DADOS; USADO 8X; id NÃO!
+-- INSERT INTO tb_items(produto,cor,tamanho,preço) VALUES ("Legging","Roxa","M",9.99);
+
+-- 3º PASSO: CRIA "CABEÇALHO" DA TABELA:
+/*
+CREATE TABLE tb_items
+	(
+	id INT AUTO_INCREMENT NOT NULL,
+    produto VARCHAR(25) NOT NULL,
+	cor VARCHAR(15) NOT NULL,
+    tamanho VARCHAR(1) NOT NULL,
+    preço DECIMAL(4,2) NOT NULL,
+    PRIMARY KEY (id)
+	);
+*/
+-- 2º PASSO: USA BASE DE DADOS CRIADA:
+-- USE db_brecho;
+
+-- 1º PASSO: CRIA BASE DE DADOS:
+-- CREATE DATABASE db_brecho;
